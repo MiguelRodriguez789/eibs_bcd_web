@@ -1,0 +1,36 @@
+------Start of DE processing------ = [6/12/21 16:33:47:954 COT]
+Exception = org.eclipse.jdt.internal.compiler.classfmt.ClassFormatException
+Source = com.ibm.ws.jsp.translator.compiler.JDTCompiler$JspNameEnvironment.getClass(String)
+probeid = 405
+Stack Dump = org.eclipse.jdt.internal.compiler.classfmt.ClassFormatException
+	at org.eclipse.jdt.internal.compiler.classfmt.ClassFileReader.<init>(ClassFileReader.java:372)
+	at com.ibm.ws.jsp.translator.compiler.JDTCompiler$JspNameEnvironment.getClass(JDTCompiler.java:407)
+	at com.ibm.ws.jsp.translator.compiler.JDTCompiler$JspNameEnvironment.findType(JDTCompiler.java:285)
+	at org.eclipse.jdt.internal.compiler.lookup.LookupEnvironment.askForType(LookupEnvironment.java:113)
+	at org.eclipse.jdt.internal.compiler.lookup.UnresolvedReferenceBinding.resolve(UnresolvedReferenceBinding.java:49)
+	at org.eclipse.jdt.internal.compiler.lookup.BinaryTypeBinding.resolveType(BinaryTypeBinding.java:122)
+	at org.eclipse.jdt.internal.compiler.lookup.PackageBinding.getTypeOrPackage(PackageBinding.java:168)
+	at org.eclipse.jdt.internal.compiler.lookup.Scope.getType(Scope.java:2469)
+	at org.eclipse.jdt.internal.compiler.ast.TypeDeclaration.resolve(TypeDeclaration.java:1006)
+	at org.eclipse.jdt.internal.compiler.ast.TypeDeclaration.resolve(TypeDeclaration.java:1258)
+	at org.eclipse.jdt.internal.compiler.ast.CompilationUnitDeclaration.resolve(CompilationUnitDeclaration.java:539)
+	at org.eclipse.jdt.internal.compiler.Compiler.process(Compiler.java:763)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:468)
+	at com.ibm.ws.jsp.translator.compiler.JDTCompiler.compile(JDTCompiler.java:177)
+	at com.ibm.ws.jsp.translator.utils.JspTranslatorUtil.translateJspAndCompile(JspTranslatorUtil.java:171)
+	at com.ibm.ws.jsp.webcontainerext.AbstractJSPExtensionServletWrapper.translateJsp(AbstractJSPExtensionServletWrapper.java:514)
+	at com.ibm.ws.jsp.webcontainerext.AbstractJSPExtensionServletWrapper._checkForTranslation(AbstractJSPExtensionServletWrapper.java:431)
+	at com.ibm.ws.jsp.webcontainerext.AbstractJSPExtensionServletWrapper.checkForTranslation(AbstractJSPExtensionServletWrapper.java:257)
+	at com.ibm.ws.jsp.webcontainerext.AbstractJSPExtensionProcessor.findWrapper(AbstractJSPExtensionProcessor.java:524)
+	at com.ibm.ws.jsp.webcontainerext.AbstractJSPExtensionProcessor.getServletWrapper(AbstractJSPExtensionProcessor.java:368)
+	at com.ibm.ws.webcontainer.webapp.WebApp.handleRequest(WebApp.java:4767)
+	at com.ibm.ws.webcontainer.osgi.DynamicVirtualHost$2.handleRequest(DynamicVirtualHost.java:297)
+	at com.ibm.ws.webcontainer.WebContainer.handleRequest(WebContainer.java:981)
+	at com.ibm.ws.webcontainer.osgi.DynamicVirtualHost$2.run(DynamicVirtualHost.java:262)
+	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink$TaskWrapper.run(HttpDispatcherLink.java:938)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+Dump of callerThis
+null

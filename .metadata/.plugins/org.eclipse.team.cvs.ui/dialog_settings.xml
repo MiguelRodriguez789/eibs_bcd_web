@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.team.ccvs.ui.RepositoriesView">
+		<item value="" key="SelectedWorkingSet"/>
+		<item value="true" key="selectedSortingOrder"/>
+		<item value="" key="filterShowModules"/>
+		<item value="0" key="selectedOrderBy"/>
+	</section>
+	<section name="RefreshRemoteProjectWizard">
+		<item value="false" key="UseWorkingSet"/>
+	</section>
+	<section name="CheckoutAsWizard">
+	</section>
+	<section name="NewLocationWizard">
+		<item value="false" key="ConfigurationWizardMainPage.STORE_DONT_VALIDATE_ID"/>
+		<list key="ConfigurationWizardMainPage.STORE_USERNAME_ID">
+			<item value="mrodriguez"/>
+		</list>
+		<list key="ConfigurationWizardMainPage.STORE_PATH_ID">
+			<item value="d:\cvs_eibs_r07m01"/>
+			<item value="d:\cvs_eibs_r07m02"/>
+		</list>
+		<list key="ConfigurationWizardMainPage.STORE_HOSTNAME_ID">
+			<item value="134.177.251.82"/>
+		</list>
+	</section>
+</section>

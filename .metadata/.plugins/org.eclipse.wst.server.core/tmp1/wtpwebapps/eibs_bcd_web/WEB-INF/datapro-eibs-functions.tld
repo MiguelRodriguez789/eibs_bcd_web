@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<taglib xmlns="http://www.datapromiami.com"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-jsptaglibrary_2_0.xsd"
+  version="2.0">
+    
+  <description>functions library</description>
+  <display-name>Functions</display-name>
+  <tlib-version>1.0</tlib-version>
+  <short-name>ibsF</short-name>
+  <uri>http://www.datapromiami.com/jsp/functions</uri>
+
+  <function>
+    <description>
+      
+    </description>
+    <name>formatDate</name>
+    <function-class>datapro.eibs.master.Util</function-class>
+    <function-signature>java.lang.String formatDate(java.lang.String , java.lang.String , java.lang.String)</function-signature>
+    <example>
+      ${ibsF:formatDate('13','11','2012')}
+    </example>
+  </function>
+
+</taglib>

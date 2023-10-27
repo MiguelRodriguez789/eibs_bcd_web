@@ -1,0 +1,44 @@
+@CHARSET "ISO-8859-1";
+
+.root{ background-image:url('../images/rbcorner.gif');
+        background-position: left center;
+        background-repeat: no-repeat;
+        background-color:#FFFFFF;
+        font-weight:bolder;
+		
+		vertical-align:middle;		
+}
+
+.expanded{ background-image:url('../images/ico5.gif');
+        background-position: left center;
+        background-repeat: no-repeat;
+        background-color:#FFFFFF;
+        font-weight:bolder;
+		
+		vertical-align:middle;		
+}
+
+.collapsed{ background-image:url('../images/ico3.gif');
+        background-position: left center;
+        background-repeat: no-repeat;
+        background-color:#FFFFFF;
+        font-weight:bolder;
+		
+		vertical-align:middle;		
+}
+.leaf{ background-image:url('../images/ico1.gif');
+        background-position: left center;
+        background-repeat: no-repeat;
+        background-color:#FFFFFF;
+        font-weight:bolder;
+		
+		vertical-align:middle;		
+}
+
+span.treeSpan {
+	font-family: "Verdana, Arial, Helvetica, sans-serif";
+	font-size:9pt;
+	border-color: #0b23b5;
+	color: #06187F;
+	
+}

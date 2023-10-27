@@ -1,0 +1,7 @@
+# 
+#Thu Dec 02 11:36:09 COT 2021
+PublishExclusionList=*.bmp, *.cab,  *.composite_diagram, *.css, *.doc, *.exe, *.gif, *.htm, *.html, *.ico, *.ini, *.jhtml, *.jpeg, *.jpg, *.js, *.jsp, *.jspf, *.jspx, *.jpg, *.oasis_composite_diagram, *.pdf, *.png, *.properties, *.swf, *.tif, *.tiff, *.ttf, *.txt, *.xhtml, *.xls, *.zip
+isPublishWithErrors=true
+isSecurityUseHttps=true
+isUseIBMSSLSocketFactory=true
+PublishInclusionList=*.class, *.xml, *.xmi, *.wsdl, *.jar, *.mf, *.xsd, *.composite, *.componentType, *.bp

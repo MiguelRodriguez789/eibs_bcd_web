@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?><archive id="defaultServer0">
+  <dir sourceOnDisk="C:\eIBS_Projects\v9.5\BCD\eibs_bcd_web\.metadata\.plugins\com.ibm.etools.webtools.mobile.ui\projects\_MobileBrowserSimulator\WebContent" targetInArchive="/"/>
+  <dir sourceOnDisk="C:\eIBS_Projects\v9.5\BCD\eibs_bcd_web\.metadata\.plugins\com.ibm.etools.webtools.mobile.ui\projects\_MobileBrowserSimulator\build\classes" targetInArchive="/WEB-INF/classes"/>
+</archive>

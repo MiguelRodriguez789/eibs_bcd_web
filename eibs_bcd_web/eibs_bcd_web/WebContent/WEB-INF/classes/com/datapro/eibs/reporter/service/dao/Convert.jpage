@@ -1,0 +1,6 @@
+class convert {
+	public static void main(String args[]) {
+		String label = "δνλθ|(ακ€+ν(βακ€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€";
+		System.out.println(label);		
+	}
+}

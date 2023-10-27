@@ -1,0 +1,6 @@
+
+ Index  Count  Time of first Occurrence    Time of last Occurrence     Exception SourceId ProbeId
+------+------+---------------------------+---------------------------+---------------------------
+     0      1    6/12/21 18:11:10:485 COT    6/12/21 18:11:10:485 COT java.lang.NullPointerException com.ibm.ws.webcontainer.webapp.WebApp.notifyServletContextCreated 1341
+                                                                            - C:\eIBS_Projects\v9.5\BCD\eibs_bcd_web\.metadata\.plugins\com.ibm.etools.wdt.server.core\tmp0\usr\servers\defaultServer0\logs\ffdc\ffdc_21.12.06_18.11.10.0.log
+------+------+---------------------------+---------------------------+---------------------------

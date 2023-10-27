@@ -1,0 +1,3 @@
+# 
+#Mon Dec 06 14:08:51 COT 2021
+webServiceTestTypes=com.ibm.ccl.ws.jaxws.gstc.ui.WebServiceSampleTest,org.eclipse.jst.ws.internal.consumption.ui.widgets.test.WebServiceSampleTest,com.ibm.etools.webservice.was.consumption.ui.utc.WASUTCTest,com.ibm.ast.ws.gsc.internal.GSCTester,org.eclipse.jst.ws.internal.consumption.ui.widgets.test.explorer.WebServiceExplorer

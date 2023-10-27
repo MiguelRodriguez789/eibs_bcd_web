@@ -1,0 +1,9 @@
+;Delphi-generated INF file for ScanActiveFormProj1.ocx
+[Add.Code]
+ScanActiveFormProj1.ocx=ScanActiveFormProj1.ocx
+
+[ScanActiveFormProj1.ocx]
+file=C:/Delphi_Projects/eibs_scan_signatures/Deploy/ScanActiveFormProj1.cab
+clsid={DB392C03-81E8-4CEF-9E0B-9B366C869B36}
+RegisterServer=yes
+FileVersion=1,0,0,0

@@ -1,0 +1,5 @@
+# 
+#Mon Dec 06 13:51:23 COT 2021
+org.eclipse.rse.systemtype.unix.systemType.enabled=false
+org.eclipse.rse.systemtype.linux.systemType.enabled=false
+org.eclipse.rse.systemtype.windows.systemType.enabled=false

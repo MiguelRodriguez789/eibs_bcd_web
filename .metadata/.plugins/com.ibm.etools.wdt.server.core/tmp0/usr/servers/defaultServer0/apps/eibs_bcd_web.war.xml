@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><archive id="defaultServer0">
+  <dir sourceOnDisk="C:\eIBS_Projects\v9.5\BCD\eibs_bcd_web\eibs_bcd_web\WebContent" targetInArchive="/"/>
+  <dir sourceOnDisk="C:\eIBS_Projects\v9.5\BCD\eibs_bcd_web\eibs_bcd_web\WebContent\WEB-INF\classes" targetInArchive="/WEB-INF/classes"/>
+  <dir sourceOnDisk="C:\eIBS_Projects\v9.5\BCD\eibs_bcd_web\eibs_bcd_web\WebContent\WEB-INF\classes" targetInArchive="/WEB-INF/classes"/>
+</archive>

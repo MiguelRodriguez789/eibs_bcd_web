@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eIBSFormDesign>
+	<!--Documents and FTP Config for eIBSForm Tool-->
+	<eIBSFTP Purpose="Edit" Language="s" Host="134.177.251.177"
+		Port="21" UserID="eibsftp" Password="mundo25" DataPath="r07m01/eibsform/data"
+		ConfigPath="r07m01/eibsform/config">
+		<!--FTP and Firewall Configuration-->
+	</eIBSFTP>
+</eIBSFormDesign>

@@ -1,0 +1,1 @@
+INDEX VERSION 1.127+C:\eIBS_Projects\v9.5\BCD\eibs_bcd_web\eibs_bcd_web\.metadata\.plugins\org.eclipse.jdt.core

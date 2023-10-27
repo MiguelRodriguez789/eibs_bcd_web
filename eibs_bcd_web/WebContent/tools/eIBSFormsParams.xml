@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eIBSForms>
+	<!--List of forms-->
+	<eIBSFormType formName="HeaderInfo" DDSClass="EFRM00001" isTable="N" eibsCode="25" label="HeaderInfo"/>
+	<eIBSFormType formName="Customer" DDSClass="EFRM00098"	isTable="N" eibsCode="25" label="Cliente"/>
+	<!--
+	<eIBSFormType formName="PurchaseSaleOparations" DDSClass="EFRM00002" isTable="N" eibsCode="25" label="Purchase-Sale Operations M.E."/>
+	<eIBSFormType formName="CreditPropousal" DDSClass="EFRM00003" isTable="N" eibsCode="25" label="Credit Proposal"/>
+	-->
+	<eIBSFormType formName="RetailAccount" DDSClass="EFRM00005" isTable="N" eibsCode="25" label="Retail Accounts"/>
+	<eIBSFormType formName="Loans" DDSClass="EFRM00080" isTable="N" eibsCode="25" label="Loans"/>
+	<eIBSFormType formName="LoansRediscountOperations" DDSClass="EFRM00081" isTable="Y" eibsCode="25" label="Paquetes Redescuento"/>
+	<eIBSFormType formName="PaymentSchedule" DDSClass="EFRM09202" isTable="Y" eibsCode="25" label="Payment Schedule"/>
+	<eIBSFormType formName="PaymentScheduleUF" DDSClass="EFRM09203" isTable="Y" eibsCode="25" label="Payment Schedule UF"/>
+	<eIBSFormType formName="Certificate" DDSClass="EFRM00010" isTable="N" eibsCode="25" label="Certificate of Deposit"/>
+	<eIBSFormType formName="CertificatePayment" DDSClass="EFRM00011" isTable="Y" eibsCode="25" label="Certificate of Deposit Payment"/>
+	<!-- Declaracion de Renta - Bancompartir --> 
+	<eIBSFormType formName="HeaderDR" DDSClass="EFRM01501" isTable="N" eibsCode="25" label="Header y Cliente DR"/>
+	<eIBSFormType formName="CustomerAccountsDR" DDSClass="EFRM01502" isTable="Y" eibsCode="25" label="Lista de productos DR"/>
+	<eIBSFormType formName="CustomerTaxesDR" DDSClass="EFRM01503" isTable="Y" eibsCode="25" label="Lista de impuestos DR"/>
+	<eIBSFormType formName="AccountsBeneficiariesDR" DDSClass="EFRM01504" isTable="Y" eibsCode="25" label="Lista de beneficiarios y titulares DR"/>
+	<!-- -->
+	<!--
+	<eIBSFormType formName="StopPayments" DDSClass="EFRM00006" isTable="N" eibsCode="25" label="Stop Payments"/>
+	<eIBSFormType formName="AccountEntities" DDSClass="EFRM00007" isTable="N" eibsCode="25" label="Account Entities"/>
+	<eIBSFormType formName="MoneyLaundry" DDSClass="EFRM00008" isTable="N" eibsCode="25" label="Money Laundry"/>
+	<eIBSFormType formName="LoansPaymentsSchedule" DDSClass="EFRM00009" isTable="N" eibsCode="25" label="Loans Payments Schedule"/>
+	<eIBSFormType formName="RemittanceLetter" DDSClass="EFRM00040" isTable="N" eibsCode="25" label="Remittance Letter"/>
+	<eIBSFormType formName="GuaranteeTickets" DDSClass="EFRM00043" isTable="N" eibsCode="25" label="Guarantee Tickets"/>
+	<eIBSFormType formName="Collections" DDSClass="EFRM00050" isTable="N" eibsCode="25" label="Collections"/>
+	<eIBSFormType formName="CollateralDetails" DDSClass="EFRM00071"	eibsCode="25" label="Collaterals Details"/>
+	<eIBSFormType formName="SpecialCodes" DDSClass="EFRM00072"	eibsCode="25" label="Special Codes"/>
+	<eIBSFormType formName="MailingAddress" DDSClass="EFRM40011" isTable="Y" eibsCode="25" label="Direcciones"/>
+	<eIBSFormType formName="StockHolders" DDSClass="EFRM40001" type="Entity" isTable="Y" eibsCode="25" label="Accionistas" />
+	<eIBSFormType formName="BoardOfDirectors" DDSClass="EFRM40001" type="Entity" isTable="Y" eibsCode="25" label="Junta Directiva"/>
+	<eIBSFormType formName="CustomerBeneficiaries" DDSClass="EFRM40001" type="Entity" isTable="Y" eibsCode="25" label="Beneficiarios"/>
+	<eIBSFormType formName="LegalRepresentatives" DDSClass="EFRM40001" type="Entity" isTable="Y" eibsCode="25" label="Representantes Legales"/>
+	<eIBSFormType formName="BankReferences" DDSClass="EFRM40101" type="Reference" isTable="Y" eibsCode="25" label="Referencias Bancarias"/>
+	<eIBSFormType formName="CommercialReferences" DDSClass="EFRM40001" type="Entity" isTable="Y" eibsCode="25" label="Referencias Comerciales"/>
+	<eIBSFormType formName="Acceptances" DDSClass="EFRM40001" type="Entity" isTable="N" eibsCode="25" label="Aceptantes"/>
+	<eIBSFormType formName="CustomerAssets" DDSClass="EFRM40001" type="Entity" isTable="N" eibsCode="25" label="Activos del Cliente"/>
+	<eIBSFormType formName="CustomerLiabilities" DDSClass="EFRM40001" type="Entity" isTable="N" eibsCode="25" label="Pasivos"/>
+	<eIBSFormType formName="ValueOfAssets" DDSClass="EFRM40001" type="Entity" isTable="N" eibsCode="25" label="Activos"/>
+	<eIBSFormType formName="Dependants" DDSClass="EFRM40001" type="Entity" isTable="N" eibsCode="25" label="Dependientes"/>
+	<eIBSFormType formName="EconomicActivity" DDSClass="EFRM40001" type="Entity" isTable="N" eibsCode="25" label="Actividad Economica"/>
+	<eIBSFormType formName="CollateralAddress" DDSClass="EFRM40001" type="Entity" isTable="N" eibsCode="25" label="Garantias"/>
+	<eIBSFormType formName="FamilyReferences" DDSClass="EFRM40001" type="Entity" isTable="N" eibsCode="25" label="Referencias Familiares"/>
+	<eIBSFormType formName="ContactInfo" DDSClass="EFRM40001" type="Entity" isTable="N" eibsCode="25" label="Contactos"/>
+	<eIBSFormType formName="PersonalReferences" DDSClass="EFRM40001" type="Entity" isTable="Y" eibsCode="25" label="Referencias Personales"/>
+	<eIBSFormType formName="CreditLinesAvals" DDSClass="EFRM40001" type="Entity" isTable="N" eibsCode="25" label="Avales"/>
+	<eIBSFormType formName="InsuranceBeneficiaries" DDSClass="EFRM40001" type="Entity" isTable="Y" eibsCode="25" label="Beneficiarios de Seguros"/>
+	<eIBSFormType formName="ManagersWithCredit" DDSClass="EFRM40001" type="Entity" isTable="N" eibsCode="25" label="Administradores"/>
+	<eIBSFormType formName="Peps" DDSClass="EFRM40001" type="Entity" isTable="Y" eibsCode="25" label="Persona Expuesta Politicamente"/>
+	-->	 
+	<eIBSFormType formName="AccountHolders" DDSClass="EFRM40001" type="Entity" isTable="Y" eibsCode="25" label="Titulares"/>
+	<eIBSFormType formName="AccountLegalRepresentatives" DDSClass="EFRM40001" type="Entity" isTable="Y" eibsCode="25" label="Representantes Legales"/>
+	<eIBSFormType formName="AccountBeneficiaries" DDSClass="EFRM40001" type="Entity" isTable="Y" eibsCode="25" label="Beneficiarios"/>
+	<eIBSFormType formName="AccountCollateralHolders" DDSClass="EFRM40001" type="Entity" isTable="Y" eibsCode="25" label="Titulares de Garantia"/>
+	<eIBSFormType formName="AccountSigners" DDSClass="EFRM40001" type="Entity" isTable="Y" eibsCode="25" label="Firmantes"/>
+	<!--
+	<eIBSFormType formName="AccountCheckedDocuments" DDSClass="EFRM40001" isTable="Y" eibsCode="25" label="Documentos"/>
+	<eIBSFormType formName="SpecialInstructions" DDSClass="EFRM00074"	eibsCode="25" label="Special Instructions"/>
+	<eIBSFormType formName="AccountHolders" DDSClass="EFRM00075"	eibsCode="25" label="Account Holders"/>
+	<eIBSFormType formName="PaymentSchedule" DDSClass="EFRM00076" isTable="Y" eibsCode="25" label="Payment Schedule"/>
+	<eIBSFormType formName="TransactionsHistory" DDSClass="EFRM00101"	eibsCode="25" label="Transactions History"/> 
+	<eIBSFormType formName="PurchaseSaleHistory" DDSClass="EFRM00201"	eibsCode="25" label="Purchase Sale History"/>		
+	-->
+	
+	
+</eIBSForms>

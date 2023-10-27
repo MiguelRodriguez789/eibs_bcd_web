@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkformat>
+<title>Cheque de Gerencia</title>
+<page size="CUSTOM" left="0" right="792" top="0" bottom="612" 
+	marginLeft="0" marginRight="0" marginTop="0" marginBottom="0">
+	<!-- Printing at 72 dpi, 8.5x72 = 612, 11x72 = 792  -->
+	<!--  	1 cm = 2.54p = 28.3465px)  -->
+	<content>
+	
+		<!-- Cheque original -->
+                    
+		<!-- Fecha del cheque -->
+		<text size="11" x="295" y="552">
+		    <field length="4">E01OFMEMY</field>
+ 			<literal>       </literal>
+			<field length="2">E01OFMEMM</field>
+			<literal>       </literal>
+			<field length="2">E01OFMEMD</field>
+		</text>
+		<!-- Monto del cheque en números -->
+		<text size="11" x="405" y="552">
+		    <literal>*</literal>
+			<field>E01OFMBD2</field>
+			<literal>*</literal>
+		</text>
+		
+        <!-- Nombre del beneficiario -->
+		<table columns="1" x="100" y="542" width="420">
+          <row type="static">
+             <cell size="8" align="left">
+                 <literal>***</literal>
+                 <field length="60" nochar="*">E01OFMBNF</field>
+			     <field length="60" nochar="*">E01OFMBN1</field>
+			     <field length="60" nochar="*">E01OFMBN2</field>
+			     <literal>***</literal>
+			 </cell>    
+          </row>
+        </table>
+		
+        
+		<!-- Monto del cheque en letras -->
+
+        <table columns="1" x="100" y="522" width="420">
+          <row type="static">
+            <cell size="8" align="left">
+                 <literal>***</literal>
+                 <field length="90" nochar="*">E01LETAMT</field>
+                 <literal>***</literal>
+            </cell>
+          </row>
+         </table>
+         <table columns="1" x="90" y="500" width="300">
+          <row type="static">
+             <cell size="8" align="left">
+                 <literal>***</literal>
+                 <field length="70" nochar="*">E01OFMCO7</field>
+                 <literal>***</literal>
+            </cell>
+           </row>
+         </table> 
+         
+        <!-- Nro. Cheque -->
+
+        <table columns="1" x="100" y="455" width="400">
+          <row type="static">
+            <cell size="8" align="left">
+                 <literal></literal>
+                 <field>E01OFMCO6</field>
+                 <literal></literal>
+            </cell>
+          </row>
+        </table>
+        
+		<!-- Concepto -->
+
+        <table columns="1" x="110" y="330" width="400">
+          <row type="static">
+            <cell size="9" align="left">
+                 <literal>En concepto de: *</literal>
+                 <field>E01OFMCO1</field>
+                 <literal>*</literal>
+            </cell>
+          </row>
+        </table>
+
+         
+	</content>
+
+</page>
+</checkformat>

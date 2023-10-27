@@ -1,0 +1,9 @@
+# 
+#Mon Dec 06 21:35:41 COT 2021
+com.ibm.etools.iseries.rse.ui.generic.obj=*
+com.ibm.etools.iseries.rse.ui.generic.lib=IBSR07M01;*LIBL;*USRLIBL;*ALLUSR;*CURLIB;*ALL
+com.ibm.etools.iseries.rse.ui.objtype=*
+com.ibm.etools.iseries.rse.ui.generic.objattr=*
+org.eclipse.rse.internal.ui.view.SystemViewConnectionAdapter\:org.eclipse.rse.ui.view.SystemTableView=org.eclipse.rse.ui.profile;org.eclipse.rse.ui.systemType;org.eclipse.rse.ui.connected;org.eclipse.rse.ui.hostname;org.eclipse.rse.ui.defaultuserid;org.eclipse.rse.ui.description
+org.eclipse.rse.internal.ui.view.SystemViewSubSystemAdapter\:org.eclipse.rse.ui.view.SystemTableView=org.eclipse.rse.ui.userid;org.eclipse.rse.ui.port;org.eclipse.rse.ui.connected;org.eclipse.rse.ui.vrm
+org.eclipse.rse.internal.files.ui.view.SystemViewRemoteFileAdapter\:org.eclipse.rse.internal.ui.view.search.SystemSearchTableView=org.eclipse.rse.ui.file.classification;org.eclipse.rse.ui.file.lastmodified;org.eclipse.rse.ui.file.size;org.eclipse.rse.ui.file.canonicalpath;org.eclipse.rse.ui.file.extension

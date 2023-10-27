@@ -1,0 +1,18 @@
+<server description="new server">   
+    <featureManager continueOnError="false">
+        <feature>localConnector-1.0</feature>
+        <feature>servlet-3.0</feature>
+        <feature>jsp-2.2</feature>
+        <feature>jaxrs-1.1</feature>
+    </featureManager>
+    <applicationMonitor updateTrigger="mbean"/>
+    <application id="proxy" location="proxy.war" name="proxy" type="war">
+    </application>
+    <httpEndpoint host="*" httpPort="${default.http.port}" httpsPort="${default.https.port}" id="defaultHttpEndpoint">
+		<tcpOptions soReuseAddr="true"/>
+	</httpEndpoint>
+
+	<application context-root="eibs_bcd" id="eibs_bcd_web" location="eibs_bcd_web.war" name="eibs_bcd_web" type="war"/>
+
+	<application context-root="_MobileBrowserSimulator" id="_MobileBrowserSimulator" location="_MobileBrowserSimulator.war" name="_MobileBrowserSimulator" type="war"/>
+</server>

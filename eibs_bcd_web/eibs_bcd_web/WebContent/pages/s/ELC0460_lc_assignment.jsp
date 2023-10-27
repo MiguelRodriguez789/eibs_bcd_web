@@ -1,0 +1,378 @@
+<%@ taglib uri="/WEB-INF/datapro-eibs-input.tld" prefix="eibsinput" %>
+<%@ page import="com.datapro.constants.EibsFields"%>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<title>Cesiones de Cartas de Crédito</title>
+<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=ISO-8859-1">
+<meta name="GENERATOR" content="IBM WebSphere Page Designer V3.5.2 for Windows">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<link Href="<%=request.getContextPath()%>/pages/style.css" rel="stylesheet">
+
+<script type="text/javascript" src="<%=request.getContextPath()%>/pages/s/javascripts/eIBS.jsp"> </script>
+<script type="text/javascript" src="<%=request.getContextPath()%>/pages/s/javascripts/optMenu.jsp"> </script>
+
+<jsp:useBean id="msg046005" class="datapro.eibs.beans.ELC046005Message"	scope="session" />
+<jsp:useBean id="error" class="datapro.eibs.beans.ELEERRMessage" scope="session" />
+<jsp:useBean id="userPO" beanName="<%=datapro.eibs.master.USession.getPOSName(request)%>" type="datapro.eibs.beans.UserPos" scope="session" />
+
+<script type="text/javascript">
+   	  <% if(request.getParameter("OPTMENU") != null) { %>
+   		builtNewMenu(<%= request.getParameter("OPTMENU")%>);
+   		initMenu();
+   <%} else {%>
+		//builtNewMenu(lc_i_opt);
+		//	initMenu();
+		   <%}%>
+	
+
+</script>
+
+<script type="text/javascript">	
+
+	function showPopUp(opth,field,bank,ccy,field1,field2,opcod) {
+   		init(opth,field,bank,ccy,field1,field2,opcod);
+   		showPopupHelp();
+   	}
+
+	function getAccountOfClient()
+	{
+		if (document.forms[0].E05LCTACF.selectedIndex == '1')
+		{	
+			return GetAccByClient('E05LCTCAC',document.forms[0].E05LCTCBK.value,'RT','',document.forms[0].E05LCTBAC.value);
+		}		
+		else
+		{	
+			return GetAccByClient('E05LCTCAC',document.forms[0].E05LCTCBK.value,'RT','','');
+		}
+	}
+   	
+</script>
+<% 
+	boolean isReadonly = true;
+	String ctrlDisabled = isReadonly ? "disabled" : "";
+	String ctrlReadonly = isReadonly ? "readonly" : "";
+%>
+<%if (!error.getERRNUM().equals("0")) {
+	error.setERRNUM("0");
+	out.println("<SCRIPT Language=\"Javascript\">");
+	out.println("       showErrors()");
+	out.println("</SCRIPT>");
+}
+%>
+</head>
+<body>
+<h3 align="center">Historial de Cesiones de Cartas de Crédito <img src="<%=request.getContextPath()%>/images/e_ibs.gif" align="left" name="EIBS_GIF" title="lc_assignment.jsp, ELC0510"></h3>
+<hr size="4">
+<form method="post"
+	action="<%=request.getContextPath()%>/servlet/datapro.eibs.products.JSELC0510">
+  <input TYPE=HIDDEN NAME="SCREEN" VALUE="112">
+  
+  <table class="tableinfo" cellspacing="0" cellpadding="2" width="100%" border="0" >
+    <tr id="trdark">
+      <td width="18%" align="right"><b>Tipo de Operacion :</b></td>
+      <td width="18%"><input name="E01LCMBNK" type="text" id="E02LCMBNK" value="<%= userPO.getHeader1() %>" size="30" maxlength="30" readonly></td>
+      <td height="18%" align="right"><b>Operador  :</b></td>
+      <td width="18%"><input type="text" name="E02ACC" size="30" maxlength="30" value="<%= userPO.getHeader2() %>" readonly></td>
+      <td height="18%" align="right"><b>Fecha y Hora  :</b></td>
+      <td width="18%"><input type="text" name="E02ACC" size="20" maxlength="12" value="<%= userPO.getHeader3() %>" readonly></td>
+    </tr>
+
+    <tr id="trdark">
+      <td width="18%" align="right"><b>Aprobación :</b></td>
+      <td width="18%"><input name="E01LCMBNK" type="text" id="E01LCMBNK" value="<%= userPO.getHeader4() %>" size="30" maxlength="30" readonly></td>
+      <td height="18%" align="right"><b>Supervisor  :</b></td>
+      <td width="18%"><input type="text" name="E02ACC" size="30" maxlength="30" value="<%= userPO.getHeader5() %>" readonly></td>
+      <td height="18%" align="right"><b>Fecha y Hora  :</b></td>
+      <td width="18%"><input type="text" name="E02ACC" size="20" maxlength="12" value="<%= userPO.getHeader6() %>" readonly></td>
+    </tr>
+  </table>
+  <br>
+  <table class="tableinfo">
+    <tbody>
+      <tr>
+        <td nowrap><table cellspacing="0" cellpadding="2" width="100%" border="0">
+            <tbody>
+              <tr id="trdark">
+                <td nowrap width="16%"><div align="right"><b>Banco :</b></div></td>
+                <td nowrap width="20%"><input type="text" name="E05LCMBNK" readonly size="4" maxlength="2" value="<%=msg046005.getE05LCMBNK().trim()%>">
+                </td>
+                <td nowrap width="16%"><div align="right"><b>Número de Carta de Crédito :</b></div></td>
+                <td nowrap width="16%"><div align="left"><b>
+                    <%if (msg046005.getE05LCMACC().trim().equals("999999999999")) {%>
+                    <input type="text" size="12" maxlength="12" value="Nuevo" readonly>
+                    <input type="hidden" name="E05LCMACC" value="<%=msg046005.getE05LCMACC().trim()%>" readonly>
+                    <%} else {%>
+                    <input type="text" name="E05LCMACC" size="12" maxlength="12" value="<%=msg046005.getE05LCMACC().trim()%>" readonly>
+                    <%}%>
+                    </b></div></td>
+              </tr>
+              <tr id="trclear">
+                <td nowrap width="16%"><div align="right"><b>Nuestra Referencia :</b></div></td>
+                <td nowrap width="20%"><div align="left">
+                    <input type="text" name="E05LCMORF" size="20" maxlength="16" value="<%=msg046005.getE05LCMORF().trim()%>" readonly>
+                  </div></td>
+                <td nowrap width="16%"><div align="right"><b>Producto :</b></div></td>
+                <td nowrap width="16%"><div align="left"><b>
+                    <input type="text" name="E05LCMPRO" size="4" maxlength="4" value="<%=msg046005.getE05LCMPRO().trim()%>" readonly>
+                    </b></div></td>
+              </tr>
+              <tr id="trdark">
+                <td nowrap width="16%"><div align="right"><b>Referencia del Otro Banco :</b></div></td>
+                <td nowrap width="16%"><div align="left"><b>
+                    <input type="text" name="E05LCMTRF" size="20" maxlength="16" value="<%=msg046005.getE05LCMTRF().trim()%>" readonly>
+                    </b></div></td>
+                <td nowrap width="16%"><div align="right"><b>Descripcion de Producto :</b></div></td>
+                <td nowrap width="16%"><div align="left"><b>
+                    <input type="text" name="E05DSCPRO" size="40" maxlength="35" value="<%=msg046005.getE05DSCPRO()%>"
+							readonly>
+                    </b></div></td>
+              </tr>
+            </tbody>
+          </table></td>
+      </tr>
+    </tbody>
+  </table>
+  <h4>Datos de la Cesión </h4>
+  <table class="tableinfo">
+    <tr id="trdark">
+        <td align="right">Número : </td>
+        <td align="left"><input type="text" name="E05LCTANUM" size="2"maxlength="2" readonly value="<%=msg046005.getE05LCTNUM()%>" <%=ctrlReadonly %>></td>
+        <td align="right">Monto Asignado :</td>
+		<td align="left"><input type="text" name="E05LCTAMT" size="20"maxlength="15" value="<%=msg046005.getE05LCTAMT()%>" <%=ctrlReadonly %>>
+			<% if (!isReadonly) {%>
+        	<img src="<%=request.getContextPath()%>/images/Check.gif" title="campo obligatorio" border="0">
+        	<% } %>
+        </td>
+    </tr>
+  </table>
+  <h4>Datos del Crédito</h4>
+  <table class="tableinfo">
+    <tr>
+      <td><table cellspacing="0" cellpadding="2" width="100%" border="0">
+          <tr id="trdark">
+            <td align="right">Fecha de Emisión :</td>
+            <td align="left">
+            	<eibsinput:date name="msg046005" fn_month="E05LCMIDM" fn_day="E05LCMIDD" fn_year="E05LCMIDY" readonly="<%=isReadonly%>" />
+            </td>
+            <td align="right">Fecha de Expiración :</td>
+            <td align="left">
+           		<eibsinput:date name="msg046005" fn_month="E05LCMEXM" fn_day="E05LCMEXD" fn_year="E05LCMEXY" readonly="<%=isReadonly%>" />
+			</td>
+          </tr>
+          <tr>
+            <td align="right">Monto Original :</td>
+            <td align="left"><input type="text" name="E05LCMCCN2" size="20"	maxlength="15" value="<%=msg046005.getE05LCMOAM().trim()%>" readonly="readonly"></td>
+            <td align="right">Monto Disponible</td>
+            <td><input type="text" name="E05LCMMEB" size="20" maxlength="15"	value="<%=msg046005.getE05LCMMEB().trim()%>" readonly="readonly"></td>
+          </tr>
+        </table></td>
+    </tr>
+  </table>
+  <h4>Beneficiario Original</h4>
+  <table class="tableinfo">
+    <tr>
+      <td><table cellspacing="0" cellpadding="2" width="100%" border="0">
+          <tbody>
+            <tr id="trdark">
+              <td align="right">Número de Cliente o de Cuenta :
+                <select name="E05LCMACF" disabled="disabled">
+                  <option value=" " <%if (!(msg046005.getE05LCMACF().equals("C") || msg046005.getE05LCMACF().equals("A")))
+	out.print("selected");%> selected></option>
+                  <option value="C" <%if (msg046005.getE05LCMACF().equals("C"))
+	out.print("selected");%>>Cliente</option>
+                  <option value="A" <%if (msg046005.getE05LCMACF().equals("A"))
+	out.print("selected");%>>Cuenta</option>
+                </select>
+              </td>
+              <td><input type="text" name="E05LCMBAC" size="12" maxlength="12"
+				value='<%=(!msg046005.getE05LCMBAC().trim().equals("0") ? msg046005.getE05LCMBAC() : "")%>'
+				readonly></td>
+            </tr>
+            <tr>
+              <td><div align="right">Nombre :</div></td>
+              <td><div align="left">
+                  <input type="text" name="E05LCMBN1" size="45" maxlength="35" value="<%=msg046005.getE05LCMBN1()%>" readonly>
+                </div></td>
+            </tr>
+            <tr id="trdark">
+              <td><div align="right">Direcci&oacute;n :</div></td>
+              <td><div align="left">
+                  <input type="text" name="E05LCMBN2" size="45" maxlength="35" value="<%=msg046005.getE05LCMBN2()%>" readonly>
+                </div></td>
+            </tr>
+            <tr id="trclear">
+              <td><div align="right"></div></td>
+              <td><div align="left">
+                  <input type="text" name="E05LCMBN3" size="45" maxlength="35" value="<%=msg046005.getE05LCMBN3()%>" readonly>
+                </div></td>
+            </tr>
+            <tr id="trdark">
+              <td><div align="right"></div></td>
+              <td><div align="left">
+                  <input type="text" name="E05LCMBN4" size="45" maxlength="35" value="<%=msg046005.getE05LCMBN4()%>" readonly>
+                </div></td>
+            </tr>
+            <tr id="trclear">
+              <td><div align="right">Estado</div></td>
+              <td align="left"><table>
+                  <tbody>
+                    <tr>
+                      <td><input type="text" name="E05LCMBN5" size="2" maxlength="2" value="<%=msg046005.getE05LCMBN5()%>" readonly>
+                        C&oacute;digo Postal
+                        <input type="text" name="E05LCMBN6" size="11" maxlength="10" value="<%=msg046005.getE05LCMBN6()%>" readonly>
+                        Pa&iacute;s
+                        <input type="text" name="E05LCMBN7" size="4" maxlength="4" value="<%=msg046005.getE05LCMBN7()%>" readonly></td>
+                    </tr>
+                  </tbody>
+                </table></td>
+            </tr>
+          </tbody>
+        </table></td>
+    </tr>
+    
+  </table>
+  <h4>Nuevo Beneficiario/Asignado</h4>
+  <table class="tableinfo">
+    <tr>
+      <td><table cellspacing="0" cellpadding="2" width="100%" border="0">
+    <tbody>
+      <tr id="trdark">
+        <td align="right" >Numero de Cliente o de Cuenta :
+          <select name="E05LCTACF" <%=ctrlDisabled %>>
+            <option value=" "> </option>
+            <option value="C"
+					<%if (msg046005.getE05LCTACF().equals("C")) out.print("selected");%>>Cliente</option>
+            <option value="A"
+					<%if (msg046005.getE05LCTACF().equals("A")) out.print("selected");%>>Cuenta</option>
+          </select></td>
+        <td><input type="text" name="E05LCTBAC" size="12" maxlength="12"
+				value='<%=(!msg046005.getE05LCTBAC().trim().equals("0") ? msg046005.getE05LCTBAC() : "")%>' <%=ctrlReadonly %>>
+				<% if (!isReadonly) { %>
+          <a
+				href="javascript: GetCustomerDetails('E05LCTBAC','E05LCTBN1','','','E05LCTBN7','E05LCTBN2','E05LCTBN3','E05LCTBN4','','E05LCTBN5','','','E05LCTBN6','','','','','')"><img
+				src="<%=request.getContextPath()%>/images/1b.gif" title=". . ."
+				onclick="javascript: document.forms[0].E05LCTACF.selectedIndex = 1"
+				border="0"></a>
+				<% } %>
+				Cliente o 
+				
+				<% if (!isReadonly) { %>
+				<a
+				href="javascript: GetAccByClient('E05LCTBAC','','RT','','E05LCTBN1')"> <img src="<%=request.getContextPath()%>/images/1b.gif" title=". . ."
+				onclick="javascript: document.forms[0].E05LCTACF.selectedIndex = 2"
+				border="0"></a> 
+				<% } %>
+				Cuenta</td>
+      </tr>
+      <tr>
+        <td><div align="right">Nombre :</div></td>
+        <td><div align="left">
+            <input type="text" name="E05LCTBN1" size="45" maxlength="35" value="<%=msg046005.getE05LCTBN1()%>" <%=ctrlReadonly %>>
+            <img src="<%=request.getContextPath()%>/images/Check.gif" title="campo obligatorio" border="0"></div></td>
+      </tr>
+      <tr id="trdark">
+        <td><div align="right">Direcci&oacute;n :</div></td>
+        <td><div align="left">
+            <input type="text" name="E05LCTBN2" size="45" maxlength="35" value="<%=msg046005.getE05LCTBN2()%>" <%=ctrlReadonly %>>
+          </div></td>
+      </tr>
+      <tr id="trclear">
+        <td><div align="right"></div></td>
+        <td><div align="left">
+            <input type="text" name="E05LCTBN3" size="45" maxlength="35" value="<%=msg046005.getE05LCTBN3()%>" <%=ctrlReadonly %>>
+          </div></td>
+      </tr>
+      <tr id="trdark">
+        <td><div align="right"></div></td>
+        <td><div align="left">
+            <input type="text" name="E05LCTBN4" size="45" maxlength="35" value="<%=msg046005.getE05LCTBN4()%>" <%=ctrlReadonly %>>
+          </div></td>
+      </tr>
+      <tr id="trclear">
+        <td><div align="right">Estado</div></td>
+        <td align="left"><table>
+            <tbody>
+              <tr>
+                <td><input type="text" name="E05LCTBN5" size="2" maxlength="2" value="<%=msg046005.getE05LCTBN5()%>" <%=ctrlReadonly %>>
+                <% if (!isReadonly) { %>
+	                <a href="javascript:GetCodeCNOFC('E05LCTBN5','27')"><img src="<%=request.getContextPath()%>/images/1b.gif" title="ayuda" align="bottom" border="0"></a>
+	                <% } %> 
+                  C&oacute;digo Postal
+                  <input type="text" name="E05LCTBN6" size="11" maxlength="10" value="<%=msg046005.getE05LCTBN6()%>" <%=ctrlReadonly %>>
+                  Pa&iacute;s
+                  <input type="text" name="E05LCTBN7" size="4" maxlength="4" value="<%=msg046005.getE05LCTBN7()%>" <%=ctrlReadonly %>>
+                  <% if (! isReadonly) { %>
+                  <a href="javascript:GetCodeCNOFC('E05LCTBN7','03')"> <img src="<%=request.getContextPath()%>/images/1b.gif" title="Ayuda" align="bottom" border="0"></a>
+                  <% } %>
+                  </td>
+              </tr>
+            </tbody>
+          </table></td>
+      	</tr>
+    </tbody>
+  </table></td></tr></table>
+  <h4>Cuenta de Repago (CR)</h4>
+  <table class="tableinfo">
+    <tr>
+      <td><table cellspacing="0" cellpadding="2" width="100%" border="0">
+          <tbody>
+            <tr id="trdark">
+              <td align="right">Banco :</td>
+              <td><input type="text" name="E05LCTCBK" size="3" maxlength="2"
+				value='<%=(!msg046005.getE05LCTCBK().trim().equals("0") ? msg046005.getE05LCTCBK() : "")%>' <%=ctrlReadonly %>></td>
+            </tr>
+            <tr>
+              <td><div align="right">Oficina :</div></td>
+              <td><div align="left">
+                  <input type="text" name="E05LCTCBR" size="5" maxlength="4" value="<%=msg046005.getE05LCTCBR()%>" <%=ctrlReadonly %>>
+                  
+                  <% if (!isReadonly) { %>
+                  <a href="javascript:GetBranch('E05LCTCBR','','')"><img src="<%=request.getContextPath()%>/images/1b.gif" title="Help" align="bottom" border="0"></a>
+                  <% } %>
+                </div></td>
+            </tr>
+            <tr id="trdark">
+              <td><div align="right">Moneda :</div></td>
+              <td><div align="left">
+                  <input type="text" name="E05LCTCCY" size="4" maxlength="3" value="<%=msg046005.getE05LCTCCY()%>" <%=ctrlReadonly %>>
+                  <% if (!isReadonly) { %>
+                  <a href="javascript:GetCurrency('E05LCTCCY','')"><img src="<%=request.getContextPath()%>/images/1b.gif" title="Help" align="bottom" border="0"></a>
+                  <% } %>
+                </div></td>
+            </tr>
+            <tr id="trclear">
+              <td><div align="right">Cuenta Contable</div></td>
+              <td><div align="left">
+                  <input type="text" name="E05LCTCGL" size="18" maxlength="17" value="<%=msg046005.getE05LCTCGL()%>" <%=ctrlReadonly %>>
+                  <% if (!isReadonly) { %>
+              	  <a href="javascript:GetLedger('E05LCTCGL',document.forms[0].E05LCTCBK.value,document.forms[0].E05LCTCCY.value,'')"><img src="<%=request.getContextPath()%>/images/1b.gif" title="ayuda" align="bottom" border="0" ></a>
+              	  <% } %>                   
+                </div></td>
+            </tr>
+            <tr id="trdark">
+              <td><div align="right">Cuenta de Cliente</div></td>
+              <td><div align="left">
+                  <input type="text" name="E05LCTCAC" size="14" maxlength="13" value="<%=msg046005.getE05LCTCAC()%>" <%=ctrlReadonly %>>
+                  <% if (!isReadonly) { %>
+				<a href="javascript:getAccountOfClient()"> <img src="<%=request.getContextPath()%>/images/1b.gif" title=". . ."
+				border="0"></a>
+				<% } %>                  
+                </div></td>
+            </tr>
+            <tr id="trclear">
+              <td><div align="right">Centro de Costo</div></td>
+              <td><div align="left">
+                  <input type="text" name="E05LCTCCC" size="10" maxlength="9" value="<%=msg046005.getE05LCTCCC()%>" <%=ctrlReadonly %>>
+                </div></td>
+            </tr>
+          </tbody>
+        </table></td>
+    </tr>
+    
+  </table>
+  <br>
+
+</form>
+</body>
+</html>

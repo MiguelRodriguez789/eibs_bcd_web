@@ -1,0 +1,10 @@
+# 
+#Mon Dec 06 16:06:49 COT 2021
+remoteHelpPath=/support/knowledgecenter/ssw_ibm_i_73,/support/knowledgecenter/SSAE4W_9.5.1
+remoteHelpOn=true
+remoteHelpPreferred=true
+remoteHelpProtocol=https,https
+remoteHelpPort=443,443
+remoteHelpName=IBM i,IBM Rational Developer for i
+remoteHelpICEnabled=true,true
+remoteHelpHost=www-01.ibm.com,www-01.ibm.com

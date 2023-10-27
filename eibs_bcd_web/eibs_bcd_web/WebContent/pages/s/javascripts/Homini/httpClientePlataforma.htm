@@ -1,0 +1,180 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <title></title>
+  <!-- Incluir el codigo de HOMINI -->
+  <script type="text/javascript" src="jsHomini.js"></script>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <!-- Incluir el codigo de HOMINI -->
+</head>
+<body>
+  </br></br>
+  Escriba el numero de identificacion y presione el boton que desea ejecutar.</br></br>
+  <input type="button" onclick="BuscarPersona()" value="Buscar persona"  />
+  <input type="button" onclick="VerificarPersona()" value="Verificacion"  />
+  <input type="button" onclick="ProcesarPersona()" value="Procesar persona"  />
+  <input type="button" onclick="MatricularPersona()" value="Matricula"  /></br></br>
+  <textarea rows="4" cols="50" id="IDPersona"></textarea></br></br>
+  Resultado: </br></br>
+  </hr>
+  <div id="divresultado" style="Width: 400px;" >  </div>
+  </hr>
+  
+  <!-- CODIGO DEL CLIENTE -->
+  <script type="text/javascript">
+    //-----------------------------------------------------------------------------
+    // BUSQUEDA - 
+    //-----------------------------------------------------------------------------
+    function BuscarPersona() {
+      // Establecer nuevo objeto
+      var objetoHOM = new HomHttp(1200);
+      var cedula = document.getElementById("IDPersona").value;
+      //-------------------------------------------------------------------------
+      // Llamar la funcion y obtener el resultado
+      //-------------------------------------------------------------------------
+      // JSON:
+      // OPERACION: Especifique 1 para busqueda
+      // TipoNip: Tipo de identificacion
+      // NIP: Identificacion
+      // InfAdicional: Usuario
+      var jsonSolicitud = "[{'Operacion':'1','TipoNip':'CC','Nip':'"+ cedula +"','InfAdicional':'usrOperacionBUS'}]";  
+      // Solicitud al componente
+      var resultado = objetoHOM.BuscarPersona(jsonSolicitud, ResBusquedaSuc, ResBusquedaError);
+    };
+    // Resultado exitoso
+    function ResBusquedaSuc(res) {
+      // Imprimir resultado
+      var s = res.split(",");
+      switch(s[0]) {
+        case "0":
+          alert('se busca la persona exitosamente.');
+          document.getElementById("divresultado").innerHTML=s[1];
+          break;
+        case "-1":
+          alert('El proceso ha sido cancelado o ocurrio un error.');
+          document.getElementById("divresultado").innerHTML=s[1];
+          break;
+      } 
+    }
+    // Resultado error
+    function ResBusquedaError(res) {
+      alert('Error: ' + res);
+    }
+    //-----------------------------------------------------------------------------
+    // VERIFICACION - 
+    //-----------------------------------------------------------------------------
+    function VerificarPersona() {
+      // Establecer nuevo objeto
+      var objetoHOM = new HomHttp(1200);
+      var cedula = document.getElementById("IDPersona").value;
+      //-------------------------------------------------------------------------
+      // Llamar la funcion y obtener el resultado
+      //-------------------------------------------------------------------------
+      // JSON:
+      // OPERACION: Especifique 2 para verificacion
+      // TipoNip: Tipo de identificacion
+      // NIP: Identificacion
+      // InfAdicional: Usuario*BolInterfaz*lngTimeOut
+      var jsonSolicitud = "[{'Operacion':'2','TipoNip':'CC','Nip':'"+ cedula +"','InfAdicional':'usrOperacionVER*0*20000'}]";  
+      // Solicitud al componente
+      var resultado = objetoHOM.VerificarPersona(jsonSolicitud, ResVerificacionSuc, ResVerificacionError);
+    };
+    // Resultado exitoso
+    function ResVerificacionSuc(res){
+      // Imprimir resultado
+      var s = res.split(",");
+      switch(s[0]) {
+        case "0":
+          alert('Se verifica la persona, resultado: ' + s[1]);
+          document.getElementById("divresultado").innerHTML=s[1];
+          break;
+        case "-1":
+          alert('El proceso ha sido cancelado o ocurrio un error.');
+          document.getElementById("divresultado").innerHTML=s[1];
+          break;
+      } 
+    }
+    // Resultado error
+    function ResVerificacionError(res) {
+      alert('Error: ' + res);
+    }
+    //-----------------------------------------------------------------------------
+    // MATRICULA - 
+    //-----------------------------------------------------------------------------
+    function MatricularPersona() {
+      // Establecer nuevo objeto
+      var objetoHOM = new HomHttp(1200);
+      var cedula = document.getElementById("IDPersona").value;
+      //-------------------------------------------------------------------------
+      // Llamar la funcion y obtener el resultado
+      //-------------------------------------------------------------------------
+      // JSON:
+      // OPERACION: Especifique 3 para matricula
+      // TipoNip: Tipo de identificacion
+      // NIP: Identificacion
+      // InfAdicional: Usuario*Nombres*Apellidos*InfAdicional
+      var jsonSolicitud = "[{'Operacion':'3','TipoNip':'CC','Nip':'"+ cedula +"','InfAdicional':'usrOperacionMAT*Nombre1*Apellido1*Matriculado desde Javascript'}]";  
+      // Solicitud al componente
+      var resultado = objetoHOM.MatricularPersona(jsonSolicitud, ResMatriculaSuc, ResMatriculaError);
+    };
+    // Resultado exitoso
+    function ResMatriculaSuc(res) {
+      // Imprimir resultado
+      var s = res.split(",");
+      switch(s[0]) {
+        case "0":
+          alert('Se matricula la persona, resultado: ' + s[1]);
+          document.getElementById("divresultado").innerHTML=s[1];
+          break;
+        case "-1":
+          alert('El proceso ha sido cancelado o ocurrio un error.');
+          document.getElementById("divresultado").innerHTML=s[1];
+          break;
+      } 
+    }
+    // Resultado error
+    function ResMatriculaError(res) {
+      alert('Error: ' + res);
+    }
+    //-----------------------------------------------------------------------------
+    // PROCESAR PERSONA - 
+    //-----------------------------------------------------------------------------
+    function ProcesarPersona() {
+      // Establecer nuevo objeto
+      var objetoHOM = new HomHttp(1200);
+      var cedula = document.getElementById("IDPersona").value;
+      //-------------------------------------------------------------------------
+      // Llamar la funcion y obtener el resultado
+      //-------------------------------------------------------------------------
+      // JSON:
+      // OPERACION: Especifique 4 para procesar persona
+      // TipoNip: Tipo de identificacion
+      // NIP: Identificacion
+      // InfAdicional: Usuario*Nombres*Apellidos*bolTomarAnexos*InfAdicional
+      var jsonSolicitud = "[{'Operacion':'4','TipoNip':'CC','Nip':'"+ cedula +"','InfAdicional':'usrOperacion*Nombres*Apellidos*False*NoHayMasInfo'}]";  
+      // Solicitud al componente
+      var resultado = objetoHOM.ProcesarPersona(jsonSolicitud, ResProPerSuc, ResProPerError);
+    };
+    // Resultado exitoso
+    function ResProPerSuc(res) {
+      // Imprimir resultado
+      var s = res.split(",");
+      switch(s[0]) {
+        case "0":
+          alert('Persona procesada exitosamente.');
+          document.getElementById("divresultado").innerHTML=s[1];
+          break;
+        case "-1":
+          alert('El proceso ha sido cancelado o ocurrio un error.');
+          document.getElementById("divresultado").innerHTML=s[1];
+          break;
+      } 
+    }
+    // Resultado error
+    function ResProPerError(res) {
+      alert('Error: ' + res);
+    }
+  </script>
+  <!-- COODIGO DEL CLIENTE -->
+</body>
+</http>

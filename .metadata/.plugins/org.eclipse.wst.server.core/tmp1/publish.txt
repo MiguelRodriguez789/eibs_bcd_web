@@ -1,0 +1,4 @@
+#Tomcat publish data
+#Tue Dec 07 15:09:56 COT 2021
+org.eclipse.jst.jee.server\:eibs_bcd_web=C\:\\Program Files (x86)\\Apache\\Tomcat 7.0\\webapps\\eibs_bcd_web
+org.eclipse.jst.j2ee.server\:_MobileBrowserSimulator=C\:\\Program Files (x86)\\Apache\\Tomcat 7.0\\webapps\\_MobileBrowserSimulator

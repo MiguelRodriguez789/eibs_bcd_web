@@ -1,0 +1,140 @@
+********************************************************************************
+product = WebSphere Application Server 8.5.5.4 (wlp-1.0.7.cl50420141211-1039)
+wlp.install.dir = C:/Users/Miguel Angel/Documents/IBM/SDP/configuration/org.eclipse.osgi/854/0/.cp/resources/server_runtime/
+server.config.dir = C:/eIBS_Projects/v9.5/BCD/eibs_bcd_web/.metadata/.plugins/com.ibm.etools.wdt.server.core/tmp0/usr/servers/defaultServer0/
+java.home = C:\Program Files (x86)\Java\jre1.8.0_311
+java.version = 1.8.0_311
+java.runtime = Java(TM) SE Runtime Environment (1.8.0_311-b11)
+os = Windows 10 (10.0; x86) (es_CO)
+process = 13988@DATAPRO-PC
+********************************************************************************
+[6/12/21 17:06:25:555 COT] 00000001 com.ibm.ws.kernel.launch.internal.FrameworkManager           A CWWKE0001I: El servidor defaultServer0 se ha lanzado.
+[6/12/21 17:06:26:226 COT] 00000001 com.ibm.ws.kernel.launch.internal.FrameworkManager           I CWWKE0002I: El kernel se ha iniciado después de 0,977 segundos
+[6/12/21 17:06:26:247 COT] 00000016 com.ibm.ws.kernel.feature.internal.FeatureManager            I CWWKF0007I: La actualización de características se ha iniciado.
+[6/12/21 17:06:26:763 COT] 0000000e com.ibm.ws.app.manager.internal.monitor.DropinMonitor        A CWWKZ0058I: Supervisando aplicaciones de dropins. 
+[6/12/21 17:06:26:772 COT] 00000018 com.ibm.ws.tcpchannel.internal.TCPChannel                    I CWWKO0219I: El canal TCP defaultHttpEndpoint se ha iniciado y ahora está a la escucha de solicitudes en el host *  (IPv6) puerto 14151.
+[6/12/21 17:06:26:931 COT] 00000020 com.ibm.ws.app.manager.AppMessageHelper                      I CWWKZ0018I: Iniciando la aplicación eibs_bcd_web.
+[6/12/21 17:06:26:931 COT] 0000001f com.ibm.ws.app.manager.AppMessageHelper                      I CWWKZ0018I: Iniciando la aplicación proxy.
+[6/12/21 17:06:27:124 COT] 0000001f com.ibm.ws.webcontainer.osgi.webapp.WebGroup                 I SRVE0169I: Cargando módulo web: Ajax Proxy for IBM WebSphere.
+[6/12/21 17:06:27:126 COT] 0000001f com.ibm.ws.webcontainer                                      I SRVE0250I: El módulo web Ajax Proxy for IBM WebSphere se ha enlazado con default_host.
+[6/12/21 17:06:27:126 COT] 0000001f com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0016I: Aplicación web disponible (default_host): http://datapro-pc:14151/proxy/
+[6/12/21 17:06:27:128 COT] 0000001f com.ibm.ws.app.manager.AppMessageHelper                      A CWWKZ0001I: La aplicación proxy se ha iniciado en 0,197 segundos.
+[6/12/21 17:06:27:942 COT] 00000020 m.ibm.ws.container.service.app.deploy.ManifestClassPathUtils W SRVE9967W: No se encuentra la classpath de manifiesto jms.jar en el archivo jar file:/C:/eIBS_Projects/v9.5/BCD/eibs_bcd_web/eibs_bcd_web/WebContent/WEB-INF/lib/com.ibm.mq.allclient.jar o su padre.
+[6/12/21 17:06:27:943 COT] 00000020 m.ibm.ws.container.service.app.deploy.ManifestClassPathUtils W SRVE9967W: No se encuentra la classpath de manifiesto fscontext.jar en el archivo jar file:/C:/eIBS_Projects/v9.5/BCD/eibs_bcd_web/eibs_bcd_web/WebContent/WEB-INF/lib/com.ibm.mq.allclient.jar o su padre.
+[6/12/21 17:06:27:943 COT] 00000020 m.ibm.ws.container.service.app.deploy.ManifestClassPathUtils W SRVE9967W: No se encuentra la classpath de manifiesto providerutil.jar en el archivo jar file:/C:/eIBS_Projects/v9.5/BCD/eibs_bcd_web/eibs_bcd_web/WebContent/WEB-INF/lib/com.ibm.mq.allclient.jar o su padre.
+[6/12/21 17:06:27:943 COT] 00000020 m.ibm.ws.container.service.app.deploy.ManifestClassPathUtils W SRVE9967W: No se encuentra la classpath de manifiesto JSON4J.jar en el archivo jar file:/C:/eIBS_Projects/v9.5/BCD/eibs_bcd_web/eibs_bcd_web/WebContent/WEB-INF/lib/com.ibm.mq.allclient.jar o su padre.
+[6/12/21 17:06:27:970 COT] 00000020 m.ibm.ws.container.service.app.deploy.ManifestClassPathUtils W SRVE9967W: No se encuentra la classpath de manifiesto jta.jar en el archivo jar file:/C:/eIBS_Projects/v9.5/BCD/eibs_bcd_web/eibs_bcd_web/WebContent/WEB-INF/lib/com.ibm.mq.jmqi.jar o su padre.
+[6/12/21 17:06:27:992 COT] 00000020 m.ibm.ws.container.service.app.deploy.ManifestClassPathUtils W SRVE9967W: No se encuentra la classpath de manifiesto jms.jar en el archivo jar file:/C:/eIBS_Projects/v9.5/BCD/eibs_bcd_web/eibs_bcd_web/WebContent/WEB-INF/lib/com.ibm.mqjms.jar o su padre.
+[6/12/21 17:06:27:993 COT] 00000020 m.ibm.ws.container.service.app.deploy.ManifestClassPathUtils W SRVE9967W: No se encuentra la classpath de manifiesto fscontext.jar en el archivo jar file:/C:/eIBS_Projects/v9.5/BCD/eibs_bcd_web/eibs_bcd_web/WebContent/WEB-INF/lib/com.ibm.mqjms.jar o su padre.
+[6/12/21 17:06:27:993 COT] 00000020 m.ibm.ws.container.service.app.deploy.ManifestClassPathUtils W SRVE9967W: No se encuentra la classpath de manifiesto providerutil.jar en el archivo jar file:/C:/eIBS_Projects/v9.5/BCD/eibs_bcd_web/eibs_bcd_web/WebContent/WEB-INF/lib/com.ibm.mqjms.jar o su padre.
+[6/12/21 17:06:28:347 COT] 00000020 m.ibm.ws.container.service.app.deploy.ManifestClassPathUtils W SRVE9967W: No se encuentra la classpath de manifiesto jms.jar en el archivo jar file:/C:/eIBS_Projects/v9.5/BCD/eibs_bcd_web/eibs_bcd_web/WebContent/WEB-INF/lib/com.ibm.mq.allclient.jar o su padre.
+[6/12/21 17:06:28:348 COT] 00000020 m.ibm.ws.container.service.app.deploy.ManifestClassPathUtils W SRVE9967W: No se encuentra la classpath de manifiesto fscontext.jar en el archivo jar file:/C:/eIBS_Projects/v9.5/BCD/eibs_bcd_web/eibs_bcd_web/WebContent/WEB-INF/lib/com.ibm.mq.allclient.jar o su padre.
+[6/12/21 17:06:28:348 COT] 00000020 m.ibm.ws.container.service.app.deploy.ManifestClassPathUtils W SRVE9967W: No se encuentra la classpath de manifiesto providerutil.jar en el archivo jar file:/C:/eIBS_Projects/v9.5/BCD/eibs_bcd_web/eibs_bcd_web/WebContent/WEB-INF/lib/com.ibm.mq.allclient.jar o su padre.
+[6/12/21 17:06:28:348 COT] 00000020 m.ibm.ws.container.service.app.deploy.ManifestClassPathUtils W SRVE9967W: No se encuentra la classpath de manifiesto JSON4J.jar en el archivo jar file:/C:/eIBS_Projects/v9.5/BCD/eibs_bcd_web/eibs_bcd_web/WebContent/WEB-INF/lib/com.ibm.mq.allclient.jar o su padre.
+[6/12/21 17:06:28:359 COT] 00000020 m.ibm.ws.container.service.app.deploy.ManifestClassPathUtils W SRVE9967W: No se encuentra la classpath de manifiesto jta.jar en el archivo jar file:/C:/eIBS_Projects/v9.5/BCD/eibs_bcd_web/eibs_bcd_web/WebContent/WEB-INF/lib/com.ibm.mq.jmqi.jar o su padre.
+[6/12/21 17:06:28:368 COT] 00000020 m.ibm.ws.container.service.app.deploy.ManifestClassPathUtils W SRVE9967W: No se encuentra la classpath de manifiesto jms.jar en el archivo jar file:/C:/eIBS_Projects/v9.5/BCD/eibs_bcd_web/eibs_bcd_web/WebContent/WEB-INF/lib/com.ibm.mqjms.jar o su padre.
+[6/12/21 17:06:28:369 COT] 00000020 m.ibm.ws.container.service.app.deploy.ManifestClassPathUtils W SRVE9967W: No se encuentra la classpath de manifiesto fscontext.jar en el archivo jar file:/C:/eIBS_Projects/v9.5/BCD/eibs_bcd_web/eibs_bcd_web/WebContent/WEB-INF/lib/com.ibm.mqjms.jar o su padre.
+[6/12/21 17:06:28:370 COT] 00000020 m.ibm.ws.container.service.app.deploy.ManifestClassPathUtils W SRVE9967W: No se encuentra la classpath de manifiesto providerutil.jar en el archivo jar file:/C:/eIBS_Projects/v9.5/BCD/eibs_bcd_web/eibs_bcd_web/WebContent/WEB-INF/lib/com.ibm.mqjms.jar o su padre.
+[6/12/21 17:06:32:073 COT] 00000020 com.ibm.ws.webcontainer.osgi.webapp.WebGroup                 I SRVE0169I: Cargando módulo web: eIBS_Web.
+[6/12/21 17:06:32:073 COT] 00000020 com.ibm.ws.webcontainer                                      I SRVE0250I: El módulo web eIBS_Web se ha enlazado con default_host.
+[6/12/21 17:06:32:073 COT] 00000020 com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0016I: Aplicación web disponible (default_host): http://datapro-pc:14151/eibs_bcd/
+[6/12/21 17:06:32:073 COT] 00000020 com.ibm.ws.app.manager.AppMessageHelper                      A CWWKZ0001I: La aplicación eibs_bcd_web se ha iniciado en 5,143 segundos.
+[6/12/21 17:06:32:081 COT] 00000016 com.ibm.ws.kernel.feature.internal.FeatureManager            A CWWKF0012I: El servidor ha instalado las características siguientes: [servlet-3.0, jsp-2.2, json-1.0, localConnector-1.0, jaxrs-1.1].
+[6/12/21 17:06:32:081 COT] 00000016 com.ibm.ws.kernel.feature.internal.FeatureManager            I CWWKF0008I: La actualización de características se ha completado en 5,856 segundos.
+[6/12/21 17:06:32:082 COT] 00000016 com.ibm.ws.kernel.feature.internal.FeatureManager            A CWWKF0011I: El servidor defaultServer0 está preparado para ejecutar un planeta más inteligente.
+[6/12/21 17:06:34:157 COT] 00000022 com.ibm.ws.session.WASSessionCore                            I SESN8501I: El gestor de sesiones no ha encontrado una ubicación de almacenamiento persistente; los objetos HttpSession se almacenarán en la memoria del servidor de aplicaciones local.
+[6/12/21 17:06:34:159 COT] 00000022 com.ibm.ws.session.WASSessionCore                            I SESN0176I: Se creará un nuevo contexto de sesión para la clave de aplicación default_host/eibs_bcd
+[6/12/21 17:06:34:163 COT] 00000022 com.ibm.ws.util                                              I SESN0172I: El gestor de sesiones está utilizando la implementación de SecureRandom Java por omisión para la generación del ID de sesión.
+[6/12/21 17:06:35:423 COT] 00000022 datapro.eibs.master.ServiceLocator                           I Can't find resource for bundle java.util.PropertyResourceBundle, key message.handler.router
+[6/12/21 17:06:35:423 COT] 00000022 datapro.eibs.master.ServiceLocator                           I Can't find resource for bundle java.util.PropertyResourceBundle, key socket.router
+[6/12/21 17:06:35:423 COT] 00000022 datapro.eibs.plugins.ServletInvokerLoadListener              I Context Listener > Initializing (eIBS_Web)
+[6/12/21 17:06:37:953 COT] 00000022 com.ibm.ws.logging.internal.impl.IncidentImpl                I FFDC1015I: Se ha creado una incidencia FFDC: "java.lang.NullPointerException com.ibm.ws.webcontainer.webapp.WebApp.notifyServletContextCreated 1341" en ffdc_21.12.06_17.06.37.0.log
+[6/12/21 17:06:37:956 COT] 00000022 com.ibm.ws.webcontainer.webapp                               E SRVE0283E: Se ha detectado una excepción al inicializar el contexto: java.lang.NullPointerException
+	at datapro.eibs.master.LocateMe.checkFile(LocateMe.java:163)
+	at datapro.eibs.master.LocateMe.staticFilePath(LocateMe.java:232)
+	at datapro.eibs.plugins.ServletInvokerLoadListener.getResourceHashes(ServletInvokerLoadListener.java:245)
+	at datapro.eibs.plugins.ServletInvokerLoadListener.contextInitialized(ServletInvokerLoadListener.java:228)
+	at com.ibm.ws.webcontainer.webapp.WebApp.notifyServletContextCreated(WebApp.java:2374)
+	at com.ibm.ws.webcontainer.webapp.WebApp.initialize(WebApp.java:1044)
+	at com.ibm.ws.webcontainer.webapp.WebApp.initialize(WebApp.java:6342)
+	at com.ibm.ws.webcontainer.osgi.DynamicVirtualHost.startWebApp(DynamicVirtualHost.java:446)
+	at com.ibm.ws.webcontainer.osgi.DynamicVirtualHost.createRunnableHandler(DynamicVirtualHost.java:248)
+	at com.ibm.ws.webcontainer.osgi.DynamicVirtualHost.createRunnableHandler(DynamicVirtualHost.java:313)
+	at com.ibm.ws.http.internal.VirtualHostImpl.discriminate(VirtualHostImpl.java:241)
+	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink.ready(HttpDispatcherLink.java:302)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.handleDiscrimination(HttpInboundLink.java:449)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.handleNewRequest(HttpInboundLink.java:383)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.processRequest(HttpInboundLink.java:283)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.ready(HttpInboundLink.java:254)
+	at com.ibm.ws.tcpchannel.internal.NewConnectionInitialReadCallback.sendToDiscriminators(NewConnectionInitialReadCallback.java:174)
+	at com.ibm.ws.tcpchannel.internal.NewConnectionInitialReadCallback.complete(NewConnectionInitialReadCallback.java:83)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.requestComplete(WorkQueueManager.java:504)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.attemptIO(WorkQueueManager.java:574)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.workerRun(WorkQueueManager.java:929)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager$Worker.run(WorkQueueManager.java:1018)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+[6/12/21 17:06:38:513 COT] 00000024 com.ibm.ws.logging.internal.impl.IncidentImpl                I FFDC1015I: Se ha creado una incidencia FFDC: "org.eclipse.jdt.internal.compiler.classfmt.ClassFormatException com.ibm.ws.jsp.translator.compiler.JDTCompiler$JspNameEnvironment.getClass(String) 405" en ffdc_21.12.06_17.06.38.0.log
+[6/12/21 17:06:38:610 COT] 00000024 com.ibm.ws.webcontainer.webapp                               E Excepción de página de error: 
+                                                                                                               eibs_bcd_web
+                                                                                                               /eibs_bcd
+                                                                                                               Excepción de página de error
+                                                                                                               com.ibm.ws.jsp.webcontainerext.JSPErrorReport: JSPG0049E: /pages/error.jsp no se ha podido compilar : 
+
+C:\eIBS_Projects\v9.5\BCD\eibs_bcd_web\.metadata\.plugins\com.ibm.etools.wdt.server.core\tmp0\usr\servers\defaultServer0\workarea\org.eclipse.osgi\64\data\temp\default_node\SMF_WebContainer\eibs_bcd_web\eibs_bcd_web\pages\_error.java : 1 : The type java.io.ObjectInputStream cannot be resolved. It is indirectly referenced from required .class files
+
+	at com.ibm.ws.jsp.webcontainerext.AbstractJSPExtensionServletWrapper.translateJsp(AbstractJSPExtensionServletWrapper.java:570)
+	at com.ibm.ws.jsp.webcontainerext.AbstractJSPExtensionServletWrapper._checkForTranslation(AbstractJSPExtensionServletWrapper.java:431)
+	at com.ibm.ws.jsp.webcontainerext.AbstractJSPExtensionServletWrapper.checkForTranslation(AbstractJSPExtensionServletWrapper.java:257)
+	at com.ibm.ws.jsp.webcontainerext.AbstractJSPExtensionProcessor.findWrapper(AbstractJSPExtensionProcessor.java:524)
+	at com.ibm.ws.jsp.webcontainerext.AbstractJSPExtensionProcessor.getServletWrapper(AbstractJSPExtensionProcessor.java:368)
+	at com.ibm.ws.webcontainer.filter.WebAppFilterManager.invokeFilters(WebAppFilterManager.java:1017)
+	at com.ibm.ws.webcontainer.webapp.WebAppRequestDispatcher.dispatch(WebAppRequestDispatcher.java:1378)
+	at com.ibm.ws.webcontainer.webapp.WebAppRequestDispatcher.forward(WebAppRequestDispatcher.java:186)
+	at com.ibm.ws.webcontainer.webapp.WebApp.sendError(WebApp.java:4140)
+	at com.ibm.ws.jsp.webcontainerext.AbstractJSPExtensionProcessor.getServletWrapper(AbstractJSPExtensionProcessor.java:401)
+	at com.ibm.ws.webcontainer.webapp.WebApp.handleRequest(WebApp.java:4767)
+	at com.ibm.ws.webcontainer.osgi.DynamicVirtualHost$2.handleRequest(DynamicVirtualHost.java:297)
+	at com.ibm.ws.webcontainer.WebContainer.handleRequest(WebContainer.java:981)
+	at com.ibm.ws.webcontainer.osgi.DynamicVirtualHost$2.run(DynamicVirtualHost.java:262)
+	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink$TaskWrapper.run(HttpDispatcherLink.java:938)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: com.ibm.ws.jsp.JspCoreException: JSPG0049E: /pages/error.jsp no se ha podido compilar : 
+
+C:\eIBS_Projects\v9.5\BCD\eibs_bcd_web\.metadata\.plugins\com.ibm.etools.wdt.server.core\tmp0\usr\servers\defaultServer0\workarea\org.eclipse.osgi\64\data\temp\default_node\SMF_WebContainer\eibs_bcd_web\eibs_bcd_web\pages\_error.java : 1 : The type java.io.ObjectInputStream cannot be resolved. It is indirectly referenced from required .class files
+
+	... 18 more
+
+[6/12/21 17:06:38:852 COT] 00000024 com.ibm.ws.webcontainer.webapp                               E Excepción de página de error: 
+                                                                                                               eibs_bcd_web
+                                                                                                               /eibs_bcd
+                                                                                                               Excepción de página de error
+                                                                                                               com.ibm.ws.jsp.webcontainerext.JSPErrorReport: JSPG0049E: /pages/s/ESD1080_client_basic.jsp no se ha podido compilar : 
+
+C:\eIBS_Projects\v9.5\BCD\eibs_bcd_web\.metadata\.plugins\com.ibm.etools.wdt.server.core\tmp0\usr\servers\defaultServer0\workarea\org.eclipse.osgi\64\data\temp\default_node\SMF_WebContainer\eibs_bcd_web\eibs_bcd_web\pages\s\_ESD1080_5F_client_5F_basic.java : 1 : The type java.io.ObjectInputStream cannot be resolved. It is indirectly referenced from required .class files
+
+	at com.ibm.ws.jsp.webcontainerext.AbstractJSPExtensionServletWrapper.translateJsp(AbstractJSPExtensionServletWrapper.java:570)
+	at com.ibm.ws.jsp.webcontainerext.AbstractJSPExtensionServletWrapper._checkForTranslation(AbstractJSPExtensionServletWrapper.java:431)
+	at com.ibm.ws.jsp.webcontainerext.AbstractJSPExtensionServletWrapper.checkForTranslation(AbstractJSPExtensionServletWrapper.java:257)
+	at com.ibm.ws.jsp.webcontainerext.AbstractJSPExtensionProcessor.findWrapper(AbstractJSPExtensionProcessor.java:524)
+	at com.ibm.ws.jsp.webcontainerext.AbstractJSPExtensionProcessor.getServletWrapper(AbstractJSPExtensionProcessor.java:368)
+	at com.ibm.ws.webcontainer.filter.WebAppFilterManager.invokeFilters(WebAppFilterManager.java:1017)
+	at com.ibm.ws.webcontainer.webapp.WebApp.handleRequest(WebApp.java:4797)
+	at com.ibm.ws.webcontainer.osgi.DynamicVirtualHost$2.handleRequest(DynamicVirtualHost.java:297)
+	at com.ibm.ws.webcontainer.WebContainer.handleRequest(WebContainer.java:981)
+	at com.ibm.ws.webcontainer.osgi.DynamicVirtualHost$2.run(DynamicVirtualHost.java:262)
+	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink$TaskWrapper.run(HttpDispatcherLink.java:938)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: com.ibm.ws.jsp.JspCoreException: JSPG0049E: /pages/s/ESD1080_client_basic.jsp no se ha podido compilar : 
+
+C:\eIBS_Projects\v9.5\BCD\eibs_bcd_web\.metadata\.plugins\com.ibm.etools.wdt.server.core\tmp0\usr\servers\defaultServer0\workarea\org.eclipse.osgi\64\data\temp\default_node\SMF_WebContainer\eibs_bcd_web\eibs_bcd_web\pages\s\_ESD1080_5F_client_5F_basic.java : 1 : The type java.io.ObjectInputStream cannot be resolved. It is indirectly referenced from required .class files
+
+	... 14 more
+
+[6/12/21 17:06:38:857 COT] 00000024 datapro.eibs.plugins.RequestFilter                           I session is invalid!

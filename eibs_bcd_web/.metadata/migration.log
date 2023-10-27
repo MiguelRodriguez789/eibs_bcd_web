@@ -1,0 +1,16 @@
+
+INFO     Validating project: eibs_bcd_web
+INFO       Running validator: Legacy Workspace Detector (id= LegacyWorkspaceDetector)
+INFO       Finished running validator: Legacy Workspace Detector (id= LegacyWorkspaceDetector)
+INFO       Running validator: EJB Mapping Validator (id= EjbMappingValidator)
+INFO         The project has no EJB model associated with it.  EJB mapping backend validation will not be performed.
+INFO       Finished running validator: EJB Mapping Validator (id= EjbMappingValidator)
+INFO       Running validator: WebSphere Facet Validator (id= WebSphereFacetValidator)
+INFO         The project has no WebSphere runtime associated with it.  WebSphere facet validation will not be performed.
+INFO       Finished running validator: WebSphere Facet Validator (id= WebSphereFacetValidator)
+INFO       Running validator: WebSphere Runtime Validator (id= WebSphereRuntimeValidator)
+INFO         The project has no WebSphere runtime associated with it.  WebSphere runtime validation will not be performed.
+INFO       Finished running validator: WebSphere Runtime Validator (id= WebSphereRuntimeValidator)
+INFO     Finished validating project: eibs_bcd_web
+
+Migration complete

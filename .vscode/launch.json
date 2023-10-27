@@ -1,0 +1,14 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "chrome",
+      "request": "launch",
+      "name": "Open EBL0110_help_message.jsp",
+      "file": "c:\\BCD\\eibs_bcd_web\\eibs_bcd_web\\WebContent\\pages\\s\\EBL0110_help_message.jsp"
+    }
+  ]
+}

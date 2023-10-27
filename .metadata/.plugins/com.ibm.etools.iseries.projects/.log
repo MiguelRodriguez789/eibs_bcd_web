@@ -1,0 +1,12 @@
+Thu Dec 09 14:26:44 COT 2021
+ERROR com.ibm.etools.iseries.projects  CommunicationsDaemon, IOException occured during communications daemon request
+java.net.BindException: Address already in use: JVM_Bind
+	at java.net.DualStackPlainSocketImpl.bind0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketBind(DualStackPlainSocketImpl.java:117)
+	at java.net.AbstractPlainSocketImpl.bind(AbstractPlainSocketImpl.java:417)
+	at java.net.PlainSocketImpl.bind(PlainSocketImpl.java:201)
+	at java.net.ServerSocket.bind(ServerSocket.java:444)
+	at java.net.ServerSocket.<init>(ServerSocket.java:258)
+	at java.net.ServerSocket.<init>(ServerSocket.java:149)
+	at com.ibm.etools.iseries.subsystems.qsys.api.SystemCommunicationsDaemon.run(SystemCommunicationsDaemon.java:161)
+--------------------------------------------

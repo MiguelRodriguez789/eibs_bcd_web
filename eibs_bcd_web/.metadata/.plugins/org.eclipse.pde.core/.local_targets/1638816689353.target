@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><?pde version="3.8"?><target name="WebSphere Application Server traditional V7.0 stub" sequenceNumber="3">
+<locations>
+<location path="C:/Users/Miguel Angel/Documents/IBM/SDP/runtimes/base_v7_stub/feature_packs/aries" type="Directory"/>
+<location path="C:/Users/Miguel Angel/Documents/IBM/SDP/runtimes/base_v7_stub/feature_packs/jpa" type="Directory"/>
+<location path="C:/Users/Miguel Angel/Documents/IBM/SDP/runtimes/base_v7_stub/feature_packs/cea" type="Directory"/>
+<location path="C:/eIBS_Projects/v9.5/BCD/eibs_bcd_web/eibs_bcd_web/.metadata/.plugins/com.ibm.etools.aries.core/system/" type="Directory"/>
+</locations>
+</target>
